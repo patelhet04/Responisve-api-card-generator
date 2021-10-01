@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%;
+    z-index: 999;
+    background-color: white;
+    border-bottom: 3px solid dodgerblue;
+    box-shadow: 5px 5px;
+    padding-top: 10px;
+}
+
+
+.header ul {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 20px;
+}
+
+.header ul li {
+    position: relative;
+    padding: 10px 2%;
+    list-style: none;
+    transition: transform .2s;
+
+}
+
+.header ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #777;
+    border: none;
+}
+
+.header ul li i {
+    padding: 0px 10px;
+
+}
+
+.header ul li:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color: dodgerblue;
+
+}
+
+.header ul li.active a {
+    color: dodgerblue;
+}
+
+.data-cards {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 80px;
+
+}
+
+
+.card {
+    height: 200px;
+    width: 300px;
+    margin: 20px;
+    padding: 5px 2%;
+    transition: transform .25s;
+}
+
+.card:hover {
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.25s ease-in-out;
+    transform: scale(1.1);
+}
+
+
+.card p {
+    color: white;
+    border-bottom: 1px solid white;
+    padding: 25px 2%;
+    font-weight: 500;
+}
+
+.card h4 {
+    color: white;
+    padding: 20px 2%;
+    font-weight: 700;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .header ul {
+        justify-content: center;
+    }
+
+    .header ul li a .label {
+        display: none;
+    }
+}
